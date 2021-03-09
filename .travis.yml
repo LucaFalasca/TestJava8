@@ -5,7 +5,7 @@ addons:
   sonarcloud:
     organization: "lucafalasca"
     token: "c9e2aada085cce98e44f4985c036dd245e0a784a" # encrypted value of your token
-before-install:
+before_install:
     - sudo apt-get update -q
     - sudo apt-get install ant-optional openjfx -y
 script: 
