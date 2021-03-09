@@ -1,11 +1,13 @@
 language: java
 jdk:
     -openjdk8
-install: ant deps
 addons:
   sonarcloud:
     organization: "lucafalasca"
     token: "c9e2aada085cce98e44f4985c036dd245e0a784a" # encrypted value of your token
+before-install:
+    - sudo apt-get update -q
+    - sudo apt-get install ant-optional openjfx -y
 script: 
     - ant build
     - sonar-scanner
